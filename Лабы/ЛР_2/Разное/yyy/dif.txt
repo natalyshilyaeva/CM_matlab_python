@@ -1,0 +1,7 @@
+def dif(P):
+  result = list()
+  for i in range(len(P)-1):
+    result.append(P[i]*(len(P)-i-1))
+  return result
+
+print (dif(list(map(int, input().split()))))

@@ -1,0 +1,16 @@
+def Chord(P):
+    a = -7
+    b = 10
+    while (abs(a - b)>0.001): 
+      a = b + (b - a)*f(P,b)/(f(P,b) - f(P,a))
+      b = a - (a - b)*f(P,a)/(f(P,a) - f(P,b))
+    return a
+
+def f(P, x):
+    y = P[0]
+    for i in range(len(P)-1):
+        y = P[i+1] + y*x
+    return y
+
+
+print (Chord(list(map(int, input().split()))))
